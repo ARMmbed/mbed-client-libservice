@@ -110,7 +110,7 @@ if (enable_coverage_data AND ${CMAKE_PROJECT_NAME} EQUAL nanostack-libservice)
     file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
 
     add_test(NAME ls_cov WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-        COMMAND ${BASH} -c "gcovr -r . -e build -e '.*test.*' --html --html-details -o build/html/example-html-details.html"
+        COMMAND ${BASH} -c "gcovr -r . -e ${CMAKE_CURRENT_SOURCE_DIR}/build -e '.*test.*' --html --html-details -o build/html/example-html-details.html"
     )
 endif ()
 
