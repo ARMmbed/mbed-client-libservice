@@ -106,7 +106,7 @@ gtest_discover_tests(stoip6_test)
 gtest_discover_tests(dynmem_test)
 gtest_discover_tests(nsnvmhelper_test)
 
-if (enable_coverage_data AND ${CMAKE_PROJECT_NAME} EQUAL nanostack-libservice)
+if (enable_coverage_data AND ${CMAKE_PROJECT_NAME} STREQUAL "nanostack-libservice")
     file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/html")
 
     add_test(NAME ls_cov WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
